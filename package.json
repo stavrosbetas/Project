@@ -18,5 +18,8 @@
   "homepage": "https://github.com/alexchal/MainProject#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }

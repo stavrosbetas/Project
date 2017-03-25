@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
 
 // This task is to develop the page without refreshing the page
 gulp.task('browserSync', function() {
@@ -34,11 +33,4 @@ gulp.task('uglify',function(){
 	gulp.src('app/js/*.js')
 	.pipe(uglify())
 	.pipe(gulp.dest('app/dist/js'));
-});
-
-// Optimizing the images and svg and save it to app/dist/images
-gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|svg)')
-  .pipe(imagemin())
-  .pipe(gulp.dest('app/dist/images'))
 });
